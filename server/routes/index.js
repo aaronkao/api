@@ -4,7 +4,7 @@
   var express = require('express');
   var router = express.Router();
   var mongojs = require('mongojs');
-  var db = mongojs(process.env.MONGODB_HOST, ['todos']);
+  var db = mongojs('mongodb://admin:admin123@'+process.env.MONGODB_HOST+'/meantodo', ['todos']);
 
   /* GET home page. */
   router.get('/', function(req, res) {
